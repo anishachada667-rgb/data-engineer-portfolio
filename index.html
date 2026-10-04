@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Anisha Reddy Chada — Data Engineer building scalable data pipelines, cloud lakehouses, streaming platforms and analytics systems.">
+<title>Anisha Reddy Chada | Data Engineer</title>
+<style>
+:root{
+  --bg:#020914; --panel:#071525; --panel2:#091c31; --text:#edf7ff; --muted:#91a8bb;
+  --line:rgba(67,191,255,.20); --cyan:#28d7ff; --blue:#398bff; --purple:#8b6cff;
+  --shadow:0 20px 60px rgba(0,0,0,.35); --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:
+radial-gradient(circle at 75% 8%,rgba(31,115,255,.13),transparent 30%),
+radial-gradient(circle at 15% 45%,rgba(0,214,255,.07),transparent 28%),var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+header{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(2,9,20,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:-.02em}.logo small{display:block;color:var(--cyan);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}
+.navlinks{display:flex;gap:26px;color:#b7cad9;font-size:.88rem}.navlinks a:hover{color:var(--cyan)}
+.menu{display:none}
+.hero{min-height:760px;padding:145px 0 75px;position:relative;overflow:hidden}
+.grid{position:absolute;inset:0;opacity:.22;background-image:linear-gradient(rgba(50,160,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(50,160,255,.09) 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,#000,transparent 80%)}
+.flow{position:absolute;inset:70px 0 0;pointer-events:none;opacity:.55}
+.flow svg{width:100%;height:100%}.flow path{fill:none;stroke:url(#g);stroke-width:1.2;stroke-dasharray:5 12;animation:dash 9s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-170}}
+.hero-content{position:relative;z-index:2}
+.eyebrow{color:var(--cyan);font-size:.76rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;margin-bottom:14px}
+h1{font-size:clamp(3rem,7vw,5.9rem);line-height:.95;letter-spacing:-.065em;max-width:720px}
+.gradient{background:linear-gradient(90deg,#fff,var(--cyan),#8ca9ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:650px;color:#a9bbca;font-size:1.08rem;margin:24px 0 28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:12px 18px;border:1px solid var(--line);border-radius:10px;font-weight:700;font-size:.9rem}.btn.primary{background:linear-gradient(135deg,#168cff,#00c7f5);color:#00101c;border:0}.btn:hover{transform:translateY(-2px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:65px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;max-width:800px}
+.stat{background:rgba(4,18,32,.86);padding:20px}.stat strong{font-size:1.55rem;color:var(--cyan);display:block}.stat span{font-size:.76rem;color:var(--muted)}
+.pipeline{position:absolute;right:0;top:180px;width:52%;max-width:610px;z-index:1}
+.pipeline-card{background:rgba(5,20,35,.78);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow);backdrop-filter:blur(10px)}
+.pipeline-title{display:flex;justify-content:space-between;color:#b8cad8;font-size:.75rem;margin-bottom:14px}.live{color:#55f0a5}.stages{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stage{border:1px solid rgba(65,190,255,.24);border-radius:12px;padding:13px;background:rgba(7,28,48,.72);min-height:92px}.stage b{display:block;color:#eaf8ff;font-size:.82rem}.stage span{color:var(--muted);font-size:.68rem}.stage i{display:block;color:var(--cyan);font-style:normal;font-size:1.15rem;margin-bottom:6px}
+section{padding:95px 0;border-top:1px solid rgba(91,182,255,.10);position:relative}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:36px}.kicker{color:var(--cyan);font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.section-head h2{font-size:2.3rem;letter-spacing:-.04em;margin-top:5px}.section-head p{color:var(--muted);max-width:520px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.about p{color:#a9bac8;font-size:1.02rem}.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}.tag{border:1px solid var(--line);background:rgba(7,25,42,.75);padding:7px 10px;border-radius:999px;font-size:.74rem;color:#b9d8e8}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{background:linear-gradient(145deg,rgba(7,25,43,.95),rgba(4,16,29,.8));border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 8px 30px rgba(0,0,0,.18)}.card h3{font-size:.92rem;margin-bottom:12px}.card ul{list-style:none;color:var(--muted);font-size:.78rem}.card li{margin:7px 0}.card li:before{content:"→";color:var(--cyan);margin-right:7px}
+.timeline{position:relative;margin-left:12px}.timeline:before{content:"";position:absolute;left:7px;top:10px;bottom:10px;width:1px;background:linear-gradient(var(--cyan),rgba(57,139,255,.08))}
+.job{position:relative;padding:0 0 45px 38px}.dot{position:absolute;left:0;top:6px;width:15px;height:15px;border:3px solid var(--cyan);background:var(--bg);border-radius:50%;box-shadow:0 0 18px rgba(40,215,255,.55)}.job-top{display:flex;justify-content:space-between;gap:20px}.job h3{font-size:1.25rem}.company{color:var(--cyan);font-weight:700}.date{color:#718b9e;font-size:.78rem;white-space:nowrap}.job ul{margin-top:13px;padding-left:17px;color:#9fb2c1;font-size:.84rem}.job li{margin:7px 0}.tech{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}.tech span{font-size:.67rem;color:#b9d8e8;background:#071d33;border:1px solid rgba(70,180,255,.18);padding:5px 8px;border-radius:999px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project{min-height:300px}.project .arch{margin:22px 0;padding:17px;border:1px solid rgba(80,190,255,.16);border-radius:11px;background:#03111f;display:flex;align-items:center;gap:7px;flex-wrap:wrap}.node{padding:8px 9px;border:1px solid rgba(69,190,255,.25);border-radius:8px;font-size:.65rem;color:#c6e8f7}.arrow{color:var(--cyan)}.project p{color:var(--muted);font-size:.8rem}.impact{color:#dff8ff!important;margin-top:13px!important}
+.bottom{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}.cert{display:flex;gap:14px;align-items:center}.cert-icon{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;background:#071e34;border:1px solid var(--line);color:var(--cyan);font-weight:800}.cert small{color:var(--muted);display:block}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#7892a4;font-size:.76rem}.footer-inner{display:flex;justify-content:space-between}
+@media(max-width:1050px){.pipeline{opacity:.32;right:-12%;width:65%}.skills{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.container{width:min(calc(100% - 28px),var(--max))}.navlinks{display:none}.menu{display:block;color:var(--cyan)}.hero{padding-top:120px;min-height:800px}.pipeline{position:relative;top:auto;right:auto;width:100%;margin-top:50px;opacity:1}.stats{grid-template-columns:repeat(2,1fr);margin-top:40px}.about,.projects,.bottom{grid-template-columns:1fr}.skills{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:10px}.job-top{display:block}.date{display:block;margin-top:4px}.hero h1{font-size:3.4rem}}
+
+<style>
+/* Interactive data-platform layer */
+.dataflow-section{background:radial-gradient(circle at 50% 40%,rgba(0,190,255,.07),transparent 45%)}
+.flow-console{border:1px solid rgba(40,215,255,.25);border-radius:18px;background:linear-gradient(145deg,rgba(3,16,29,.97),rgba(5,24,42,.92));box-shadow:0 30px 90px rgba(0,0,0,.35);overflow:hidden}
+.console-top{display:flex;justify-content:space-between;padding:13px 17px;border-bottom:1px solid rgba(40,215,255,.14);font-size:.68rem;color:#7291a5;letter-spacing:.06em}
+.console-status{color:#65dca2}.console-status i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#55f0a5;box-shadow:0 0 10px #55f0a5;margin-right:5px}
+.pipeline-track{display:flex;align-items:center;padding:50px 28px 42px;position:relative}
+.pipeline-track:before{content:"";position:absolute;left:70px;right:70px;top:86px;height:1px;background:linear-gradient(90deg,rgba(40,215,255,.1),rgba(40,215,255,.65),rgba(139,108,255,.45),rgba(40,215,255,.1))}
+.flow-node{position:relative;z-index:2;flex:1;min-width:100px;background:#061728;color:#c8dce8;border:1px solid rgba(70,190,255,.22);border-radius:13px;padding:15px 10px;cursor:pointer;transition:.25s;box-shadow:0 0 0 rgba(40,215,255,0)}
+.flow-node:hover,.flow-node.active{transform:translateY(-7px);border-color:rgba(40,215,255,.85);box-shadow:0 12px 30px rgba(0,190,255,.12),0 0 25px rgba(40,215,255,.10)}
+.flow-node.active{background:linear-gradient(160deg,#0a2942,#071a2d)}
+.flow-node .node-num{display:block;color:var(--cyan);font-size:.62rem;margin-bottom:7px;letter-spacing:.08em}
+.flow-node strong{display:block;font-size:.78rem}.flow-node small{display:block;color:#70899a;font-size:.62rem;margin-top:3px}
+.connector{width:22px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue));position:relative;z-index:1;flex:0 0 22px;opacity:.7}
+.connector:after{content:"";position:absolute;right:-1px;top:-3px;border-left:5px solid var(--cyan);border-top:4px solid transparent;border-bottom:4px solid transparent}
+.data-packet{position:absolute;z-index:3;width:6px;height:6px;border-radius:50%;background:#fff;box-shadow:0 0 15px 4px var(--cyan);top:83px}
+.packet-a{animation:packet 7s linear infinite}.packet-b{animation:packet 7s 3.5s linear infinite}
+@keyframes packet{0%{left:6%;opacity:0}7%{opacity:1}93%{opacity:1}100%{left:94%;opacity:0}}
+.stage-detail{display:grid;grid-template-columns:1.05fr 1.95fr;gap:30px;padding:26px;border-top:1px solid rgba(40,215,255,.13);background:rgba(2,11,21,.55)}
+.detail-label{color:var(--cyan);font-size:.62rem;letter-spacing:.14em;font-weight:800}.stage-detail h3{font-size:1.6rem;margin:3px 0}.stage-detail p{font-size:.8rem;color:var(--muted);max-width:440px}
+.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.detail-grid div{border:1px solid rgba(65,190,255,.13);border-radius:10px;padding:12px;background:#061728}.detail-grid span{display:block;color:#607d91;font-size:.58rem;letter-spacing:.09em}.detail-grid b{display:block;color:#cfeaf6;font-size:.72rem;margin-top:5px}
+.scroll-hint{text-align:center;color:#597587;font-size:.62rem;letter-spacing:.1em;margin-top:20px}.scroll-hint span{color:var(--cyan);font-size:1rem;margin-left:8px}
+.architecture-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.arch-card{background:linear-gradient(145deg,rgba(6,25,43,.92),rgba(3,14,25,.9));border:1px solid rgba(70,190,255,.18);border-radius:15px;padding:21px;transition:.25s}.arch-card:hover{transform:translateY(-4px);border-color:rgba(40,215,255,.48);box-shadow:0 18px 45px rgba(0,0,0,.22)}
+.arch-head{display:flex;gap:12px;align-items:center}.arch-icon{display:grid;place-items:center;width:37px;height:37px;border-radius:9px;background:#071f35;color:var(--cyan);font-size:.65rem;font-weight:800}.arch-head h3{font-size:1rem}.arch-head small{color:#6e8798;font-size:.68rem}.arch-line{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:21px 0 15px}.arch-line b{font-size:.62rem;color:#c8e6f2;border:1px solid rgba(70,190,255,.17);background:#061a2d;padding:7px 8px;border-radius:7px}.arch-line span{font-size:.7rem;color:var(--cyan)}.arch-card p{font-size:.76rem;color:var(--muted)}.mini-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}.mini-tags span{font-size:.61rem;color:#83b3c8;background:#061a2c;padding:4px 7px;border-radius:999px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:760px){.pipeline-track{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:24px}.pipeline-track:before,.connector{display:none}.flow-node{min-width:0}.data-packet{display:none}.stage-detail,.architecture-grid{grid-template-columns:1fr}.detail-grid{grid-template-columns:1fr}}
+</style>
+
+</style>
+</head>
+<body>
+<header><nav class="container">
+<a href="#home" class="logo">Anisha Reddy Chada<small>Data Engineer</small></a>
+<div class="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a></div>
+<div class="menu">☰</div>
+</nav></header>
+
+<main id="home">
+<section class="hero">
+<div class="grid"></div>
+<div class="flow"><svg viewBox="0 0 1400 700" preserveAspectRatio="none"><defs><linearGradient id="g"><stop stop-color="#28d7ff"/><stop offset=".5" stop-color="#398bff"/><stop offset="1" stop-color="#8b6cff"/></linearGradient></defs>
+<path d="M-30 610 C240 440 300 680 570 500 S930 260 1430 390"/><path d="M-20 530 C220 350 430 560 690 390 S1080 170 1430 290"/><path d="M-40 660 C300 520 450 700 760 500 S1120 430 1450 180"/><path d="M0 390 C230 520 360 300 610 430 S1060 570 1450 350"/></svg></div>
+<div class="container hero-content">
+<div class="eyebrow">Building data pipelines → powering insights</div>
+<h1>Anisha Reddy Chada<br><span class="gradient">Data Engineer</span></h1>
+<p>I design and build scalable batch and real-time data pipelines, cloud lakehouses, and governed data platforms that turn complex data into reliable business insights.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore Projects →</a><a class="btn" href="resume.pdf">Download Resume ↓</a></div>
+<div class="stats"><div class="stat"><strong>5+</strong><span>Years Experience</span></div><div class="stat"><strong>2+ TB/day</strong><span>Data Processed</span></div><div class="stat"><strong>15+</strong><span>Production Pipelines</span></div><div class="stat"><strong>AWS · Azure · GCP</strong><span>Cloud Platforms</span></div></div>
+</div>
+<div class="pipeline"><div class="pipeline-card"><div class="pipeline-title"><b>DATA PLATFORM / LIVE FLOW</b><span class="live">● STREAMING</span></div>
+<div class="stages">
+<div class="stage"><i>◎</i><b>Sources</b><span>SQL · APIs · Kafka · IoT</span></div><div class="stage"><i>⇢</i><b>Ingestion</b><span>ADF · Glue · Lambda</span></div><div class="stage"><i>⚙</i><b>Processing</b><span>Spark · PySpark · Scala</span></div>
+<div class="stage"><i>◈</i><b>Lakehouse</b><span>Databricks · Delta</span></div><div class="stage"><i>▦</i><b>Warehouse</b><span>Redshift · Synapse</span></div><div class="stage"><i>↗</i><b>Analytics</b><span>BI · ML · AI</span></div>
+</div></div></div>
+</section>
+
+<section id="about"><div class="container about">
+<div><div class="kicker">01 / About</div><h2>Turning data into business value.</h2><p style="margin-top:18px">Data Engineer with 5+ years of experience building scalable data pipelines, lakehouses and cloud data platforms across AWS, Azure and GCP. I specialize in Python, SQL, Spark, Databricks, dbt and Airflow, with a strong focus on data quality, governance, performance and automation.</p>
+<div class="tags"><span class="tag">ETL / ELT</span><span class="tag">Lakehouse Architecture</span><span class="tag">Real-Time Streaming</span><span class="tag">Data Modeling</span><span class="tag">Cloud Engineering</span><span class="tag">AI / GenAI Pipelines</span></div></div>
+<div class="card"><div class="kicker">DATA LIFECYCLE</div><h3 style="font-size:1.5rem;margin:12px 0">Data → Pipelines → Insights → Impact</h3><p style="color:var(--muted);font-size:.85rem">From source ingestion and distributed processing to governed storage and BI delivery, I build systems designed for scale, reliability and maintainability.</p></div>
+</div></section>
+
+<section id="skills"><div class="container"><div class="section-head"><div><div class="kicker">02 / Technical Stack</div><h2>Tools & Technologies</h2></div><p>A practical engineering stack spanning distributed processing, cloud platforms, orchestration, governance, quality and analytics.</p></div>
+<div class="skills">
+<div class="card"><h3>⌘ Languages</h3><ul><li>Python / Pandas</li><li>SQL / T-SQL</li><li>Scala / PySpark</li><li>Spark SQL / HiveQL</li><li>Bash</li></ul></div>
+<div class="card"><h3>◈ Big Data & Streaming</h3><ul><li>Apache Spark</li><li>Spark Structured Streaming</li><li>Databricks / Delta Lake</li><li>Hadoop / Hive</li><li>Kafka / Event Hub / IoT Hub</li></ul></div>
+<div class="card"><h3>☁ Cloud Platforms</h3><ul><li>AWS: S3, Glue, EMR, Lambda</li><li>EC2, ECS, Redshift, CloudWatch</li><li>Azure: ADF, ADLS, Synapse</li><li>Azure SQL / GCP</li></ul></div>
+<div class="card"><h3>⌁ Governance</h3><ul><li>Unity Catalog / RBAC</li><li>Audit Logging</li><li>Data Lineage</li><li>Lakehouse / Medallion</li><li>Databricks Workflows</li></ul></div>
+<div class="card"><h3>⚙ DevOps & Orchestration</h3><ul><li>Airflow / ADF / AWS Glue</li><li>GitHub Actions / GitLab</li><li>Azure DevOps / Jenkins</li><li>Terraform / IaC</li></ul></div>
+<div class="card"><h3>▦ Modeling & Warehousing</h3><ul><li>Dimensional / Star Schema</li><li>Normalization</li><li>Data Marts / ODS</li><li>Data Lakes</li></ul></div>
+<div class="card"><h3>✓ Quality & Testing</h3><ul><li>Profiling / Cleaning / Validation</li><li>Unit / Integration Testing</li><li>dbt Tests / Reconciliation</li><li>UAT</li></ul></div>
+<div class="card"><h3>◒ BI & AI</h3><ul><li>Power BI / Tableau</li><li>BI Automation</li><li>OpenAI Services</li><li>Vector Embeddings</li><li>ML / GenAI Data Pipelines</li></ul></div>
+</div></div></section>
+
+<section id="experience"><div class="container"><div class="section-head"><div><div class="kicker">03 / Experience</div><h2>Engineering at scale</h2></div></div>
+<div class="timeline">
+<div class="job"><span class="dot"></span><div class="job-top"><div><h3>Data Engineer</h3><div class="company">Intuit</div></div><div class="date">May 2025 — Present · United States</div></div><ul>
+<li>Architected Python, PySpark, Scala, SQL, Databricks and Delta Lake pipelines on S3 processing <b>2+ TB/day</b>.</li><li>Engineered Kafka + Spark Structured Streaming, Lambda, REST and GraphQL integrations, cutting a key pipeline from <b>4 hours to 75 minutes</b>.</li><li>Led dbt + Airflow + Databricks Workflows across <b>15+ production pipelines</b> loading Amazon Redshift.</li><li>Owned Unity Catalog governance, RBAC, audit logging, lineage, validation and CloudWatch monitoring, achieving <b>98% successful completion</b>.</li><li>Optimized Spark, SQL and Redshift workloads, reducing selected analytical runtimes by <b>30%</b>.</li><li>Built CI/CD with Databricks Asset Bundles, GitHub Actions, GitLab, Terraform and Jira/ServiceNow workflows.</li><li>Built ML and GenAI data pipelines using S3, OpenAI services and vector embeddings, saving <b>10 hours</b> per development cycle.</li></ul><div class="tech"><span>Python</span><span>PySpark</span><span>Databricks</span><span>AWS</span><span>Kafka</span><span>dbt</span><span>Airflow</span></div></div>
+<div class="job"><span class="dot"></span><div class="job-top"><div><h3>Associate Data Engineer</h3><div class="company">Dr. Reddy’s Laboratories</div></div><div class="date">Jan 2022 — Jul 2024 · India</div></div><ul>
+<li>Developed batch and streaming pipelines ingesting pharmaceutical and manufacturing data at <b>300+ GB/day</b>.</li><li>Built ADF ingestion from 8+ on-premises and cloud sources into ADLS and Databricks.</li><li>Designed data models, ODS and data marts in Synapse and SQL Server, standardizing definitions across <b>10+ reports</b>.</li><li>Optimized Spark and Synapse processing, reducing selected batch runtimes by <b>25%</b>.</li><li>Orchestrated 15+ production workflows and implemented testing and validation supporting <b>97% successful completion</b>.</li></ul><div class="tech"><span>Python</span><span>PySpark</span><span>Azure</span><span>Synapse</span><span>ADF</span><span>Airflow</span><span>dbt</span></div></div>
+<div class="job"><span class="dot"></span><div class="job-top"><div><h3>Data Analyst</h3><div class="company">Tech Mahindra</div></div><div class="date">Jan 2021 — Dec 2021 · India</div></div><ul>
+<li>Profiled and cleaned <b>500+ GB/day</b> using Python and SQL across Azure SQL and REST APIs.</li><li>Automated data preparation with SQL, Bash and ADF, reducing manual work by approximately <b>12 hours</b> per reporting cycle.</li><li>Built Tableau and Power BI reporting across 10+ recurring reports and established data quality checks.</li></ul><div class="tech"><span>Python</span><span>SQL</span><span>Tableau</span><span>Power BI</span><span>ADF</span></div></div>
+</div></div></section>
+
+<section id="projects"><div class="container"><div class="section-head"><div><div class="kicker">04 / Featured Projects</div><h2>Pipeline architecture</h2></div><p>Selected projects demonstrating ingestion, transformation, lakehouse design, orchestration and data quality.</p></div>
+<div class="projects">
+<article class="card project"><h3>Cloud Lakehouse Modernization Pipeline</h3><div class="tech"><span>Azure</span><span>ADF</span><span>Databricks</span><span>Delta Lake</span><span>PostgreSQL</span></div><div class="arch"><span class="node">PostgreSQL<br>20+ tables</span><span class="arrow">→</span><span class="node">ADF<br>Ingestion</span><span class="arrow">→</span><span class="node">BRONZE<br>Delta</span><span class="arrow">→</span><span class="node">SILVER<br>Transform</span><span class="arrow">→</span><span class="node">GOLD<br>Star Schema</span></div><p>Migrated ~5M records into an Azure Lakehouse using medallion architecture, watermark-based incremental loading and source-to-target reconciliation.</p><p class="impact">↳ 60% faster daily refresh · 4 fact tables · 6 dimensions</p></article>
+<article class="card project"><h3>Multi-Source Data Integration Platform</h3><div class="tech"><span>Python</span><span>Spark</span><span>MongoDB</span><span>PostgreSQL</span><span>Airflow</span></div><div class="arch"><span class="node">MongoDB<br>1M+ docs</span><span class="arrow">→</span><span class="node">PySpark<br>Flatten</span><span class="arrow">→</span><span class="node">PostgreSQL<br>Model</span><span class="arrow">→</span><span class="node">Airflow<br>Orchestrate</span></div><p>Integrated semi-structured MongoDB documents with PostgreSQL records, flattening nested JSON into 8 normalized analytical tables.</p><p class="impact">↳ 99% successful runs · 3% duplicates removed · 10+ Airflow tasks</p></article>
+</div></div></section>
+
+<section id="credentials"><div class="container"><div class="section-head"><div><div class="kicker">06 / Credentials</div><h2>Education & Certifications</h2></div></div>
+<div class="bottom">
+<div class="card"><div class="cert"><div class="cert-icon">AZ</div><div><b>Microsoft Certified</b><small>Azure Data Engineer Associate · DP-203</small></div></div></div>
+<div class="card"><div class="cert"><div class="cert-icon">DB</div><div><b>Databricks Certified</b><small>Data Engineer Associate</small></div></div></div>
+<div class="card"><div class="cert"><div class="cert-icon">UC</div><div><b>University of Cincinnati</b><small>MS Information Technology · GPA 4.0 · Dec 2025</small></div></div></div>
+</div></div></section>
+
+<section id="contact"><div class="container"><div class="card" style="text-align:center;padding:55px 25px"><div class="kicker">07 / Contact</div><h2 style="font-size:2.5rem;margin:8px 0">Let’s build reliable data systems.</h2><p style="color:var(--muted);max-width:600px;margin:0 auto 22px">Open to Data Engineering opportunities involving cloud platforms, distributed data processing, lakehouse architecture and analytics.</p><div class="actions" style="justify-content:center"><a class="btn primary" href="mailto:chadaay0908@gmail.com">Email Me →</a><a class="btn" href="https://www.linkedin.com/in/anisha-chada-47ab7322a/" target="_blank">LinkedIn ↗</a><a class="btn" href="https://github.com/anishachada667-rgb" target="_blank">GitHub ↗</a></div></div></div></section>
+
+<section id="dataflow" class="dataflow-section">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">03 / Interactive Data Flow</div><h2>Explore the pipeline</h2></div>
+      <p>Follow a typical production data path. Click any stage to see the technologies, responsibilities and measurable outcomes behind my engineering work.</p>
+    </div>
+
+    <div class="flow-console" id="flowConsole">
+      <div class="console-top">
+        <span><b>ANISHA_DATA_PLATFORM</b> / PIPELINE_EXPLORER</span>
+        <span class="console-status"><i></i> PIPELINE HEALTH: 98%</span>
+      </div>
+
+      <div class="pipeline-track" id="pipelineTrack">
+        <div class="data-packet packet-a"></div>
+        <div class="data-packet packet-b"></div>
+        <button class="flow-node active" data-stage="sources"><span class="node-num">01</span><strong>Sources</strong><small>SQL · APIs · IoT</small></button>
+        <span class="connector"></span>
+        <button class="flow-node" data-stage="ingestion"><span class="node-num">02</span><strong>Ingestion</strong><small>ADF · Glue · Kafka</small></button>
+        <span class="connector"></span>
+        <button class="flow-node" data-stage="processing"><span class="node-num">03</span><strong>Processing</strong><small>Spark · PySpark</small></button>
+        <span class="connector"></span>
+        <button class="flow-node" data-stage="lakehouse"><span class="node-num">04</span><strong>Lakehouse</strong><small>Delta · Databricks</small></button>
+        <span class="connector"></span>
+        <button class="flow-node" data-stage="warehouse"><span class="node-num">05</span><strong>Warehouse</strong><small>Redshift · Synapse</small></button>
+        <span class="connector"></span>
+        <button class="flow-node" data-stage="analytics"><span class="node-num">06</span><strong>Analytics</strong><small>BI · ML · AI</small></button>
+      </div>
+
+      <div class="stage-detail" id="stageDetail">
+        <div>
+          <div class="detail-label">ACTIVE STAGE</div>
+          <h3 id="detailTitle">Sources</h3>
+          <p id="detailText"></p>
+        </div>
+        <div class="detail-grid">
+          <div><span>TOOLS</span><b id="detailTools"></b></div>
+          <div><span>ENGINEERING FOCUS</span><b id="detailFocus"></b></div>
+          <div><span>EXAMPLE IMPACT</span><b id="detailImpact"></b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">SCROLL THROUGH THE PAGE — PIPELINE STAGES ACTIVATE AS YOU REACH THEM <span>↓</span></div>
+  </div>
+</section>
+
+<section id="architecture">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">04 / Architecture Lab</div><h2>Systems I like to build</h2></div>
+      <p>Architecture is where the portfolio becomes more than a resume. These patterns connect directly to the work described in my experience.</p>
+    </div>
+    <div class="architecture-grid">
+      <article class="arch-card">
+        <div class="arch-head"><span class="arch-icon">01</span><div><h3>Batch Lakehouse</h3><small>Reliable daily processing</small></div></div>
+        <div class="arch-line"><b>Sources</b><span>→</span><b>ADF / Glue</b><span>→</span><b>Bronze</b><span>→</span><b>Silver</b><span>→</span><b>Gold</b></div>
+        <p>Incremental ingestion, schema validation, medallion transformations, reconciliation and governed analytical delivery.</p>
+        <div class="mini-tags"><span>2+ TB/day</span><span>Delta Lake</span><span>dbt</span></div>
+      </article>
+      <article class="arch-card">
+        <div class="arch-head"><span class="arch-icon">02</span><div><h3>Real-Time Platform</h3><small>Streaming event processing</small></div></div>
+        <div class="arch-line"><b>Kafka</b><span>→</span><b>Streaming</b><span>→</span><b>Spark</b><span>→</span><b>Delta</b><span>→</span><b>BI</b></div>
+        <p>Event-driven ingestion with distributed processing, checkpointing, monitoring and downstream analytical consumption.</p>
+        <div class="mini-tags"><span>Kafka</span><span>Structured Streaming</span><span>CloudWatch</span></div>
+      </article>
+      <article class="arch-card">
+        <div class="arch-head"><span class="arch-icon">03</span><div><h3>Governed Data Platform</h3><small>Quality + security by design</small></div></div>
+        <div class="arch-line"><b>Catalog</b><span>→</span><b>RBAC</b><span>→</span><b>Lineage</b><span>→</span><b>Tests</b><span>→</span><b>Audit</b></div>
+        <p>Data quality and governance embedded into production workflows instead of treated as an afterthought.</p>
+        <div class="mini-tags"><span>Unity Catalog</span><span>dbt Tests</span><span>Audit Logging</span></div>
+      </article>
+      <article class="arch-card">
+        <div class="arch-head"><span class="arch-icon">04</span><div><h3>AI Data Pipeline</h3><small>Data prepared for ML & GenAI</small></div></div>
+        <div class="arch-line"><b>Sources</b><span>→</span><b>Clean</b><span>→</span><b>Embed</b><span>→</span><b>Index</b><span>→</span><b>AI</b></div>
+        <p>Dataset preparation, vector embeddings and knowledge-source pipelines supporting machine learning and generative AI workflows.</p>
+        <div class="mini-tags"><span>OpenAI</span><span>Embeddings</span><span>Python</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="container footer-inner"><span>Anisha Reddy Chada · Data Engineer</span><span>Scalable Pipelines · Reliable Data · Real Business Impact</span></div></footer>
+
+<script>
+const stageData = {
+  sources:{title:"Sources",text:"Bring together structured, semi-structured and event data before it enters the platform.",tools:"SQL · REST · GraphQL · MongoDB · IoT",focus:"Source profiling + contracts",impact:"500+ GB/day at Tech Mahindra"},
+  ingestion:{title:"Ingestion",text:"Build resilient batch and event-driven ingestion paths with retries, dependencies and incremental loading.",tools:"ADF · AWS Glue · Lambda · Kafka",focus:"Incremental + reliable ingestion",impact:"8+ source systems integrated"},
+  processing:{title:"Processing",text:"Use distributed processing to clean, transform, enrich and prepare datasets for analytical consumption.",tools:"PySpark · Spark SQL · Scala · Streaming",focus:"Performance + transformation",impact:"4 hours → 75 minutes"},
+  lakehouse:{title:"Lakehouse",text:"Organize data through governed Bronze, Silver and Gold layers using Delta Lake and Databricks.",tools:"Databricks · Delta Lake · Unity Catalog",focus:"Medallion + governance",impact:"2+ TB/day processed"},
+  warehouse:{title:"Warehouse",text:"Serve trusted, modeled data through analytical warehouses and reusable transformation frameworks.",tools:"Redshift · Synapse · dbt · SQL",focus:"Data modeling + optimization",impact:"30% selected runtime reduction"},
+  analytics:{title:"Analytics",text:"Deliver reliable datasets to BI, machine learning and generative AI workflows.",tools:"Power BI · Tableau · OpenAI · Embeddings",focus:"Decision-ready data",impact:"10 hours saved / AI data cycle"}
+};
+const title = document.getElementById("detailTitle"), text = document.getElementById("detailText");
+const tools = document.getElementById("detailTools"), focus = document.getElementById("detailFocus"), impact = document.getElementById("detailImpact");
+function setStage(key){
+  const d=stageData[key]; if(!d)return;
+  document.querySelectorAll(".flow-node").forEach(n=>n.classList.toggle("active",n.dataset.stage===key));
+  title.textContent=d.title;text.textContent=d.text;tools.textContent=d.tools;focus.textContent=d.focus;impact.textContent=d.impact;
+}
+document.querySelectorAll(".flow-node").forEach(n=>n.addEventListener("click",()=>setStage(n.dataset.stage)));
+setStage("sources");
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")});
+},{threshold:.12});
+document.querySelectorAll("section:not(.hero) .card, .job, .arch-card, .flow-console").forEach(el=>{el.classList.add("reveal");observer.observe(el)});
+
+const flowSection=document.getElementById("dataflow");
+const nodes=[...document.querySelectorAll(".flow-node")];
+const flowObserver=new IntersectionObserver(entries=>{
+  if(!entries[0].isIntersecting)return;
+  let i=0;
+  const timer=setInterval(()=>{if(i<nodes.length){setStage(nodes[i].dataset.stage);i++}else clearInterval(timer)},1300);
+},{threshold:.45});
+flowObserver.observe(flowSection);
+</script>
+
+</body></html>
