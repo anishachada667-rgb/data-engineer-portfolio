@@ -135,6 +135,30 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:#7892a4;font-size:.
 
 <section id="projects"><div class="container"><div class="section-head"><div><div class="kicker">04 / Featured Projects</div><h2>Pipeline architecture</h2></div><p>Selected projects demonstrating ingestion, transformation, lakehouse design, orchestration and data quality.</p></div>
 <div class="projects">
+<article class="card project">
+<h3>Snowflake Retail Analytics ELT Warehouse</h3>
+<div class="tech">
+<span>Snowflake</span><span>dbt Cloud</span><span>Airbyte</span>
+<span>Terraform</span><span>GitHub Actions</span><span>SQL</span>
+</div>
+<div class="arch">
+<span class="node">Public CSVs<br>5 Datasets</span>
+<span class="arrow">→</span>
+<span class="node">Airbyte<br>Snowflake RAW</span>
+<span class="arrow">→</span>
+<span class="node">dbt Models<br>Incremental Orders</span>
+<span class="arrow">→</span>
+<span class="node">Sales Mart<br>Customer History</span>
+</div>
+<p>Built a retail ELT warehouse to produce consistent reporting across orders, order items, customers, products, and stores. Loaded 5.1 million synthetic records through Airbyte and developed eight dbt models, including an incremental order fact table and a daily store sales mart. Aggregated items before joining to preserve order totals, and captured customer name changes with SCD Type 2 snapshots.</p>
+<p>Provisioned Snowflake compute, databases, schemas, service users, and role-based permissions with Terraform. Implemented GitHub Actions pull request CI using key-pair authentication and a separate Snowflake CI database. Verified incremental updates, unchanged reruns, customer history, and reconciliation through 40 passing data tests.</p>
+<p class="impact">↳ 5,115,339 synthetic source records · 2,088,006 unique orders · $22.42M simulated order value · 40 passing tests</p>
+<div class="tech" style="margin-top:16px">
+<a class="btn" style="padding:8px 12px;font-size:.7rem"
+href="https://github.com/anishachada667-rgb/snowflake-dbt-elt-warehouse"
+target="_blank" rel="noopener">View GitHub ↗</a>
+</div>
+</article>
 <article class="card project"><h3>Pharmaceutical Supply Chain CDC &amp; Analytics Platform</h3><div class="tech"><span>Python</span><span>SQL</span><span>PostgreSQL</span><span>Debezium</span><span>Kafka</span><span>dbt</span><span>Airflow</span><span>Docker</span><span>GitHub Actions</span><span>Streamlit</span></div><div class="arch"><span class="node">PostgreSQL<br>5 Source Tables</span><span class="arrow">→</span><span class="node">Debezium / Kafka<br>Change Capture</span><span class="arrow">→</span><span class="node">Python Warehouse<br>Checkpoints</span><span class="arrow">→</span><span class="node">dbt / Airflow<br>History &amp; Quality</span><span class="arrow">→</span><span class="node">Supply Chain<br>Dashboard</span></div><p>Built a local CDC platform to keep supplier, purchase-order, shipment and inventory reporting consistent as source records change. Implemented transactional checkpoints, replay-safe updates and delete handling, SCD Type 2 supplier snapshots, incremental inventory processing and a six-task Airflow workflow scheduled every 15 minutes. Verified a catch-up gate that blocks downstream processing while ingestion is behind and recovers through retry after the consumer restarts.</p><p class="impact">↳ 10,590 synthetic source records · 10,594 messages replayed without duplication · 39 passing dbt tests</p><p>Streamlit analytics cover 5,000 purchase-order lines, 3,242 completed orders, 38.31% on-time delivery and 307,706 stock units. Docker-based local project with GitHub Actions configuration and parsing checks.</p><div class="tech" style="margin-top:16px"><a class="btn" style="padding:8px 12px;font-size:.7rem" href="https://github.com/anishachada667-rgb/pharma-supply-chain-cdc" target="_blank" rel="noopener">View GitHub ↗</a></div></article>
 
 <article class="card project"><h3>Real-Time Financial Transaction Lakehouse</h3><div class="tech"><span>Python</span><span>PySpark</span><span>Kafka</span><span>Azure Event Hubs</span><span>Databricks</span><span>Delta Lake</span></div><div class="arch"><span class="node">Python<br>Producer</span><span class="arrow">→</span><span class="node">Kafka / Event Hubs<br>3 Partitions</span><span class="arrow">→</span><span class="node">Spark<br>Streaming</span><span class="arrow">→</span><span class="node">BRONZE / SILVER<br>Quality</span><span class="arrow">→</span><span class="node">GOLD<br>Analytics</span></div><p>Built an end-to-end real-time transaction pipeline for a simulated financial platform, combining local Kafka streaming with Azure Event Hubs and Azure Databricks. Implemented Delta Lake and Unity Catalog medallion processing with validation, quarantine handling, deduplication, monitoring and explainable rule-based risk scoring.</p><p class="impact">↳ 1,010 events ingested · 950 clean Silver records · 51 quarantined · 9 valid duplicates removed · $4.73M simulated transaction value</p><div class="tech" style="margin-top:16px"><a class="btn" style="padding:8px 12px;font-size:.7rem" href="https://github.com/anishachada667-rgb/realtime-financial-transaction-lakehouse" target="_blank" rel="noopener">View GitHub ↗</a></div></article>
